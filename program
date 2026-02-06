@@ -1,0 +1,192 @@
+
+print('Ansa Ann Andrews') #python excecutes line by line and is case sensitive
+print('o----')
+print(' ||||')
+print('*' * 10)
+
+#variables
+price = 10
+price = 20
+print(price)
+rating = 4.9
+name = 'mosh'
+var_svx = True #boolean variable
+
+pat_name = 'John Smith'
+age = 20
+is_new = True
+
+name = input('Name please: ')
+print('Hi ' + name) #concatenation
+
+name=input('Enter your name ')
+colour = input('Enter your fav colour ')
+print(name + ' likes ' + colour)
+
+
+#type convertion  int()  float()  bool() 
+by = int(input('Enter your birtrh year '))
+print(type(by))
+AGE = 2026 - by
+print(type(AGE))
+print(AGE)
+
+weight = float(input('Enter your weights in pounds '))
+weight *= 0.453
+print('Weight in kg = ',weight)
+
+
+#strings
+course = "python course's"
+print(course)
+
+
+
+course = "python course's"
+print(course[4])
+
+print(course[-1])  #prints last character
+
+print(course[-2])  #prints 2 nd last character
+
+print(course[0:3])  #prints pyt
+
+print(course[1:])  #prints all except p
+
+print(course[:4])  #prints pyth
+
+print(course[:])  #prints all
+
+name='jenifer'
+print(course[1:-1]) #prints 1 to -1
+
+#formatted strings
+first = 'john'
+last = 'smith'
+print(first,' [',last,']') #john  [ smith ]
+
+print(f'{first} {last} is a coder')
+
+#string methods
+print(len(course))
+course = "python courses"
+print(course.upper())
+print(course) #print orginal one
+print(course.lower())
+
+print(course.find('o')) #prints 4
+
+print(course.find('courses')) #prints 7
+
+print(course.replace('python','learnplease')) #prints learn corses
+
+
+print('python' in course)  #True
+
+#ARITHEMATIC OPERATIONS
+print(10 + 3)
+print(10 - 3)
+print(10 * 3)
+print(10 / 3) #in decimal format
+print(10 // 3) #prints in integer part
+print(10 % 3) #remainder
+print(10 ** 3) # 10 raise to 3
+
+a=13
+a=a+1 #a+=1
+print(a)
+
+#OPERATOR PRECEDANCE ( ),** IE EXPONENT,* /,+ -
+
+#MATHEMATIC FUNCTIOS
+#round()
+#abs(-6)
+
+import math
+print(math.ceil(10.9))
+print(math.floor(10.9))
+
+#if,elif,else
+
+#logical operators  AND,OR,NOT
+
+#COMPARISON OPERATORS < > == !=
+
+#WHILE
+i=1
+while i<=5:
+    print('*' * i)
+    i += 1
+
+#GUESSING GAME
+i=1
+while i<=3:
+    guess = int(input('Guess'))
+    if guess == 9:
+       print('Ya you got it')
+       break
+    else:
+        i+=1
+
+#CAR GAME
+
+command = ''
+started = False
+stoped = False
+while True:
+    command = input("")
+    if command == 'start':
+        if started:
+            print('HEY Car is already started')
+        else:
+            started = True
+            print('car started')
+    elif command == 'stop':
+        if stoped:
+            print('HEY Car is already stoped')
+        else:
+            stoped = True
+            print('car stopped')
+    elif command == 'quit':
+        print('program quit')
+        break
+    elif command == 'help':
+        print("INFORMATION")
+    else:
+        print("SORRY YOU ENTERED WRONG")
+
+#for loop
+for item in 'PYTHON':
+    print(item)
+
+for item in ['a','b','c']:
+    print(item)
+
+for item in range(10):
+    print(item)
+
+for item in range(3,23):
+    print(item)
+
+for item in range(3,23,2):
+    print(item)
+
+price = [10, 20, 30]
+totalp = 0
+for item in price:
+    totalp += item
+print(f'SUM = {totalp}')
+
+#NESTED LOOP
+for x in range(3):
+    for y in range(3):
+        print(f'({x} , {y})')
+
+#LISTS
+#PRGM TO FIND LARGEST NUMBER IN A LIST
+lists = [3,8,2,876,0]
+max= lists[0]
+for i in lists:
+    if i > max:
+        max = i
+print(max)
