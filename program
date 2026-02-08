@@ -190,3 +190,94 @@ for i in lists:
     if i > max:
         max = i
 print(max)
+
+#2 D LIST
+
+twodlist = [[1,2,3],[4,5],[8,9,10]]
+print(twodlist[1][0])
+
+twodlist[1][0]=20
+print(twodlist[1][0])
+
+for row in twodlist:
+    print(row)
+
+list=[6,8,4,43]
+list.append(100)
+print(list)
+
+list.insert(1,300)
+print(list)
+
+list.remove(6)
+print(list)
+
+list.clear()
+print(list)
+
+list=[6,8,4,43]
+list.pop()
+print(list)
+
+print(list.index(6))
+#same=
+print(6 in list)
+
+print(list)
+list=[6,6,8,4,43]
+print(list.count(6))
+list.sort()
+print(list)
+list.reverse()
+print(list)
+
+list2 = list.copy()
+print(list)
+
+#prgm to remove duplicates in a list
+listp = [100, 12, 4, 12, 2]
+unique = []
+for i in listp:
+    if i not in unique:
+        unique.append(i)
+print(unique)
+        
+#TUPLES
+num =(4, 2, 1, 2, 3)
+print(num.count(2))
+print(num.index(1))
+
+#UNPACKING
+listtuples = (10, 20, 30)
+x, y, z = listtuples
+print(z)
+
+#DICTIONARIES
+information = {"name" : "Ansa",
+               "sem" : 6
+               }
+
+print(information["name"])
+#same =
+print(information.get("name"))
+
+#prgm to convert phone no into words
+phone = input("Enter the phone no ")
+directory = {1 : "one",
+             2: "two",
+             3 : "three",
+             4 : "four",
+             5: "five"}
+phoneinwords = ""
+for i in phone:
+    digit = int(i)
+    phoneinwords += directory.get(digit,"!") + ' '
+print(phoneinwords)
+
+#FUNCTIONS LEAVE 2 LINES AFTER FNS
+
+#PARAMETERS
+def para(fname, lname):
+    print(f'HI {fname} {lname}')
+
+para("Ansa","Andrews")
