@@ -281,3 +281,132 @@ def para(fname, lname):
     print(f'HI {fname} {lname}')
 
 para("Ansa","Andrews")
+
+#KEYWORD ARGUMENT
+para(lname= 'Andrews', fname = 'Ansa')
+
+#RETURN STATEMENT
+def square(num):
+    num = num * num
+    return num
+
+print(square(3))
+
+#CREATING A REUSABLE FN
+
+#EXCEPTIONS
+try:
+    age = int(input("Enter the age: "))
+    print(age)
+except ZeroDivisionError:
+    print("AGE CANNOT BE ZERO")
+except ValueError:
+    print("You didnt entered age correctly")
+
+#COMMENTS
+
+#classes
+class Point:
+    def __init__(self, x=0, y=0): #for constructor
+        self.x = x
+        self.y = y
+    def move(self):
+        print('move')
+    def  draw(self):
+        print('draw')
+point1 = Point() #object
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point1.draw()
+
+#constructors
+point = Point(10, 20)
+print(point.x)
+
+#inheritance
+class Mammal():
+    def walk(self):
+        print('walk')
+
+
+class Dog(Mammal):
+    pass
+
+
+class Cat(Mammal):
+    pass
+
+dog1 = Dog() #object
+dog1.walk()
+
+#modules
+import convertors
+print(convertors.kgtolbs(70))
+#from convertors import kgtolbs
+from utils import find_max
+numbers = [2, 100, 5, 34,0]
+maximum = find_max(numbers)
+print(maximum)
+
+#packages
+import ecommerce.shipping
+ecommerce.shipping.calcshipping()
+
+from ecommerce.shipping import calcshipping
+calcshipping()
+calcshipping()
+
+from ecommerce import shipping
+shipping.calcshipping()
+shipping.calcshipping()
+
+#Generating random values
+import random #built in fn
+for i in range(3):
+    print(random.random())
+
+for i in range(3):
+    print(random.randint(27,34))
+
+members = ['ansa', 'a', 'b', 'c', 'd']
+leader = random.choice(members)
+print(leader)
+
+#tossing of dice
+class Dice:
+    def roll(self):
+        selectedvalue1 = random.randint(1, 6)
+        selectedvalue2 = random.randint(1, 6)
+        return selectedvalue1, selectedvalue2
+
+
+dice = Dice()
+print(dice.roll())
+
+
+#direcoties
+from pathlib import Path
+
+path = Path('ecommerce')
+print(path.exists()) #output = true
+
+path = Path('email')
+print(path.mkdir()) #output = None makes a directory email
+
+path = Path("email")
+print(path.rmdir()) #output = None deletes a directory email
+
+path = Path()
+print(path.glob('*.py'))
+
+path = Path()
+for file in path.glob('*.py'):
+    print(file)
+
+path = Path()
+for file in path.glob('*'):
+    print(file)
+
+#pypi and pip
+# pip install openpyxl     in terminal
