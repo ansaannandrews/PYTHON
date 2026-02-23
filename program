@@ -410,3 +410,24 @@ for file in path.glob('*'):
 
 #pypi and pip
 # pip install openpyxl     in terminal
+
+
+
+
+
+#shipping.py
+def calcshipping():
+    print('calcshipping')
+#convertors.py
+def lbstokg(weight):
+    return weight*0.45
+
+def kgtolbs(weight):
+    return weight/0.45
+#utils.py
+def find_max(numbers):
+    maximum = numbers[0]
+    for number in numbers:
+            if number > maximum:
+                maximum = number
+    return maximum
