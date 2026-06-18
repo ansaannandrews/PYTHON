@@ -1,1 +1,56 @@
+x=input()
 
+   01234   --->index
+x="hello"
+print(x[1])
+print(x[1:4])
+print(x[0:5:2])
+print(x[4:-1:-1])
+x[1]="a"
+print(x) #error
+
+#prgm to count vowels in a given string
+str=input()
+count=0
+for i in str:
+    if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
+        count+=1
+print(count)
+#or
+str=input()
+vowel="aeiouAEIOU"
+count=0
+for item in str:
+    if item in vowel:
+        count+=1
+print(count)
+
+#STRINGS CANNOT BE CHANGED ONCE INITIALIZED BECAUSE STRING IS IMMUTABLE
+#prm to convert upper case letters in given string to lower case without using built in fn
+s = input()
+result = ""
+for item in s:
+    if 'A' <= item <= 'Z':
+        result += chr(ord(item) + 32)
+    else:
+        result += item
+
+print(result)
+
+
+#PYTHON CONTAINERS-->LIST, TUPLE, DICTIONARY
+                     LIST=[] TUPLE=() 
+y=(1,2,3,4)
+y[1]="hello"
+print(y) #ERROR TUPLE IS IMMUTABLE THEY CANNOT BE CHANGED EX:DOB
+
+#DICTIONARY
+Q={1,2,3,4} #SET
+print(Q) #PRINTS ITEM IN ANY ORDER
+#SET IS UNORDERED collection OF UNIQUE ITEMS
+Q={} #DOES NOT REPRESENT EMPTY SET REPRESENT DICTNIORY
+a=set() #EMPTY SET
+#DICTIONARY"""
+D={"a":10,2:"HI"}
+#   KEY:VALUE
+print(D["a"])
