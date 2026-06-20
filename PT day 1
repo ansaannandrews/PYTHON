@@ -1,1 +1,171 @@
+#Area of a circle
+radius=int(input())
+area=3.14*(radius**2)
+print(area)
 
+#Factorial of the given number
+n=int(input())
+fact=1
+for i in range(2,n+1):
+    fact*=i
+print(fact)
+
+#Reverse of input number
+n=int(input())
+b=0
+while n>0:
+    a=n%10
+    b=b*10+a
+    n=n//10
+print(b)
+
+print("Heloo")
+print("Ansa")
+
+print("Heloo",end="")
+print("Ansa")
+
+print("Heloo",end=" ")
+print("Ansa")
+
+#To check whether a given number is odd or even
+n=int(input())
+if(n%2==0):
+    print("EVEN")
+else:
+    print("ODD")
+
+#1. Arithmetic OperatorsUsed to perform common mathematical operations.+ (Addition): x + y- (Subtraction): x - y* (Multiplication): x * y/ (Division): x / y (Always returns a float, e.g., 5 / 2 = 2.5)% (Modulo): x % y (Returns the remainder, e.g., 5 % 2 = 1) (Exponentiation): x  y (Power, e.g., 2  3 = 8)// (Floor Division): x // y (Rounds down to the nearest whole number, e.g., 5 // 2 = 2)2. Assignment OperatorsUsed to assign values to variables. You can combine them with arithmetic operators to shorten your code.= : x = 5+= : x += 3 (Same as x = x + 3)-= : x -= 3 (Same as x = x - 3)*= : x *= 3 (Same as x = x * 3)/= : x /= 3 (Same as x = x / 3)3. Comparison (Relational) OperatorsUsed to compare two values. They always return either True or False.== (Equal to): x == y!= (Not equal to): x != y> (Greater than): x > y< (Less than): x < y>= (Greater than or equal to): x >= y<= (Less than or equal to): x <= y4. Logical OperatorsUsed to combine conditional statements.and : Returns True if both statements are true (e.g., x > 5 and x < 10)or : Returns True if at least one of the statements is true (e.g., x > 5 or x < 4)not : Reverses the result (e.g., not(x > 5) returns False if x is greater than 5)5. Bitwise OperatorsUsed to compare (binary) numbers bit by bit.& (AND): Sets each bit to 1 if both bits are 1| (OR): Sets each bit to 1 if one of two bits is 1^ (XOR): Sets each bit to 1 if only one of two bits is 1~ (NOT): Inverts all the bits<< (Zero fill left shift): Shift left by pushing zeros in from the right>> (Signed right shift): Shift right by pushing copies of the leftmost bit in from the left6. Identity OperatorsUsed to check if two objects are actually the same object in memory (not just if their values are equal).is : Returns True if both variables point to the same object (x is y)is not : Returns True if both variables do not point to the same object (x is not y)7. Membership OperatorsUsed to test if a sequence (like a string, list, or tuple) is present inside an object.in : Returns True if the value is found in the sequence (e.g., 'a' in 'Ansa')not in : Returns True if the value is not found in the sequence
+#To check whether a given number is odd or even WITHOUT USING ARITHEMATIC OPERATORS
+n=input()
+evennos="02468"
+if n[-1] in evennos:
+    print("EVEN")
+else:
+    print("ODD")
+#or
+n = int(input())
+if (n & 1) == 0:
+    print("EVEN")
+else:
+    print("ODD")
+
+#swapping of 2 numbers in 5 6 op 6 5 with using 3rd var
+a,b=map(int,input().split())
+temp=a
+a=b
+b=temp
+print(a)
+print(b)
+
+#python is dynamically typed language means you do not have to declare the data type of a variable when you create it; Python automatically detects the type at runtime based on the value you assign to it.
+a = 5
+print(a)
+a = "hello"
+print(a)
+
+#swapping of 2 numbers in 5 6 op 6 5 without using 3rd var
+a,b = map(int,input().split())
+a=a+b
+b=a-b
+a=a-b
+print(a)
+print(b)
+
+#swapping of 2 numbers in 5 6 op 6 5 without using 3rd var without + -
+a,b = map(int,input().split())
+a=a*b
+b=a//b
+a=a//b
+print(a)
+print(b)
+
+#swapping of 2 numbers in 5 6 op 6 5 without using 3rd var without + - with bitwise
+a,b = map(int,input().split())
+a=a^b
+b=a^b
+a=a^b
+print(a)
+print(b)
+
+#Check given no +ve -ve 0
+n=int(input())
+if(n>0):
+    print("Positive")
+elif:
+    print("Negative")
+else:
+    print("Zero")
+
+#Check given no +ve -ve 0 using function
+def pnzf():
+    n=int(input())
+    if n>0:
+        print("Positive")
+    elif n<0:
+        print("Negative")
+    else:
+        print("Zero")
+pnzf()
+
+#Check given no +ve -ve 0 using function USING MAIN function
+def pnzf(a):
+    if(a>0):
+      print("Positive")
+    elif(a<0):
+      print("Negative")
+    else:
+      print("Zero")
+
+n=int(input())
+pnzf(n)
+
+def pnzf(a):
+    if(a>0):
+      return "Positive"
+    elif(a<0):
+      return "Negative"
+    else:
+      return "Zero"
+
+n=int(input())
+result = pnzf(n)
+print(result)
+
+#Reverse of a number using function
+def reverse(x):
+    b=0
+    while x>0:
+        a=x%10
+        b=b*10+a
+        x=x//10
+    return b
+
+n=int(input())
+result = reverse(n)
+print(result)
+
+#Factorial of a number using function
+def factorial(a):
+    fact=1
+    for i in range(2,a+1):
+        fact*=i
+    return fact
+
+n=int(input())
+result = factorial(n)
+print(result)
+
+#Prime checking of number using function
+def prime(a):
+    if n<=1:
+        return "Not Prime Number"
+    for i in range(2,n):
+        if n%i == 0:
+            return "Not Prime Number"
+        
+    return "Prime Number"
+        
+n=int(input())
+result = prime(n)
+print(result)
