@@ -1,14 +1,12 @@
-x=input()
-
-   01234   --->index
+#  01234   --->index
 x="hello"
 print(x[1])
 print(x[1:4])
 print(x[0:5:2])
-print(x[4:-1:-1])
+print(x[4::-1])
 x[1]="a"
-print(x) #error
-
+print(x) #error 
+            
 #prgm to count vowels in a given string
 str=input()
 count=0
@@ -23,34 +21,51 @@ count=0
 for item in str:
     if item in vowel:
         count+=1
-print(count)
+print(count)            
+            
+#STRINGS CANNOT BE CHANGED ONCE INITIALIZED BECAUSE STRING IS IMMUTABLE            
 
-#STRINGS CANNOT BE CHANGED ONCE INITIALIZED BECAUSE STRING IS IMMUTABLE
 #prm to convert upper case letters in given string to lower case without using built in fn
-s = input()
-result = ""
-for item in s:
-    if 'A' <= item <= 'Z':
-        result += chr(ord(item) + 32)
+str=input()
+result=""
+for item in str:
+    if 'A'<=item<='Z':
+        result+=chr(ord(item)+32)
     else:
-        result += item
-
+        result+=item
 print(result)
 
-
-#PYTHON CONTAINERS-->LIST, TUPLE, DICTIONARY
-                     LIST=[] TUPLE=() 
+#PYTHON CONTAINERS-->LIST, TUPLE, DICTIONARY,SET
+                     LIST=[] TUPLE=()
 y=(1,2,3,4)
 y[1]="hello"
 print(y) #ERROR TUPLE IS IMMUTABLE THEY CANNOT BE CHANGED EX:DOB
 
-#DICTIONARY
-Q={1,2,3,4} #SET
+1. List []
+1-Point Definition: An ordered, changeable (mutable) collection that allows duplicate items and can hold mixed data types.
+
+1 Application: A Shopping Cart on an app like Amazon, where you can freely add items, remove items, or change quantities.
+
+2. Tuple ()
+1-Point Definition: An ordered, unchangeable (immutable) collection that is locked the moment you create it.
+
+1 Application: Storing GPS Coordinates (Latitude, Longitude) for a location, because the position of a building on a map never changes.
+
+3. Dictionary {key: value}
+1-Point Definition: A collection of data stored in pairs of unique keys and values, used for quick lookups.
+
+1 Application: A User Profile Database, where you use a unique key like "username" to quickly find a value like "Ansa123".
+
+4. Set {}
+1-Point Definition: An unordered collection of entirely unique items that automatically deletes any duplicate entries.
+
+1 Application: Storing User IDs currently online in a game, ensuring a player isn't accidentally counted or listed twice."""
+
+Q={1,2,3,4,4,3} #SET
 print(Q) #PRINTS ITEM IN ANY ORDER
-#SET IS UNORDERED collection OF UNIQUE ITEMS
 Q={} #DOES NOT REPRESENT EMPTY SET REPRESENT DICTNIORY
 a=set() #EMPTY SET
-#DICTIONARY"""
+#DICTIONARY
 D={"a":10,2:"HI"}
 #   KEY:VALUE
 print(D["a"])
