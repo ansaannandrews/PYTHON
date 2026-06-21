@@ -59,7 +59,7 @@ print(y) #ERROR TUPLE IS IMMUTABLE THEY CANNOT BE CHANGED EX:DOB
 4. Set {}
 1-Point Definition: An unordered collection of entirely unique items that automatically deletes any duplicate entries.
 
-1 Application: Storing User IDs currently online in a game, ensuring a player isn't accidentally counted or listed twice."""
+1 Application: Storing User IDs currently online in a game, ensuring a player isn't accidentally counted or listed twice.
 
 Q={1,2,3,4,4,3} #SET
 print(Q) #PRINTS ITEM IN ANY ORDER
