@@ -1,26 +1,5 @@
-# factorial using fn using main fn
-"""def factorial(num):
-    fact=1
-    for i in range(1,num+1):
-        fact=fact*i
-    return fact
-num=int(input())
-result=factorial(num)
-print(result)
-
-#prime number check using fn using main fn
-def prime(num):
-    temp=num
-    s=0
-    for i in range(1,num+1):
-        if num%i ==0:
-            s=s+i
-    if (s==temp+1):
-        return "prime"
-    else:
-        return "not prime"
-num=int(input()) 
-result=prime(num)
+n=int(input())
+result = prime(n)
 print(result)
 
 n = 1
@@ -45,22 +24,23 @@ for i in range(1,11,2):
 
 for i in range(10,0,-1):
     print(i)
-    
+
 #for can be repalced by while reverse not possible
 
 #to find nth term of fibinacci series
 n=int(input())
 a=0
 b=1
-if n==1:
-    print(a)
-elif n==2:
-    print(b)
-for i in range(3,n+1):
-    c = a + b
-    a = b
-    b = c
-print(c)
+if n==a:
+    print(0)
+elif n==b:
+    print(1)
+else:
+    for i in range(2,n+1):
+        c=a+b
+        a=b
+        b=c
+    print(c)
 
 #to find the sum of digits of given number
 n=int(input())
@@ -71,6 +51,7 @@ while(n>0):
     n=n//10
 print(b)
 
+#to find the repeated sum of digits of given number
 n=int(input())
 if(n==0):
     print(0)
@@ -78,170 +59,175 @@ elif(n%9 == 0):
     print(9)
 else:
     print(n%9)
+#OR
+n=int(input())
+while n>9:
+    b=0
+    while(n>0):
+        a=n%10
+        b=b+a
+        n=n//10
+    n=b
+print(n)
     
 #to print prime no. within a range ex 11 to 25
 n1 = int(input())
 n2 = int(input())
-for i in range(n1, n2 + 1):
-    flag = 0
 
-    if i < 2:
-        continue
+for i in range(n1,n2+1):
+    flag=0
+    if i<2:
+        flag=1
+    else:
+        for j in range(2, (i//2)+1):
+            if i%j==0:
+                flag=1
+                break
+        if(flag ==0):
+            print(i)
 
-    for j in range(2, i // 2 + 1):
-        if i % j == 0:
-            flag = 1
-            break
-
-    if flag == 0:
-        print(i, end=" ")
-
-
-#print solid rectangle
-N = int(input())
-for i in range(1,N+1):
-    for j in range(1,N+1):
-        print("* ",end="")
+#Print solid rectangle
+n = int(input())
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        print("*",end="")
     print()
-
-#print hollow rectangle(hint: using coordinates)
-# Print hollow square
-N = int(input())
-for i in range(N):
-    for j in range(N):
-        if i == 0 or i == N-1 or j == 0 or j == N-1:
-            print("*", end=" ")
-        else:
-            print(" ", end=" ")
-    print()
-
-
+            
+#print hollow rectangle(hint: using coordinates)            
+n = int(input())
+for i in range(1,n+1):
+    if i==1 or i==n:
+        for j in range(1,n+1):
+            print("*",end="")
+    else:
+        for j in range(1,n+1):
+            if j==1 or j==n:
+                print("*",end="")
+            else:
+                print(" ",end="")
+    print()        
+            
 #pattern(n)
 *
 * *
-* * *
+* * *  
 n = int(input())
-for i in range(n):
-    for j in range(0,i+1):
-        print("*", end=" ")
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print("*",end="")
     print()
-
+            
 #pattern(n)
-     *
-*    *
+  *
+ **
+***
 n = int(input())
-for i in range(n):
-    for k in range(n-i-1):
-        print(" ", end=" ")
-    for j in range(i+1):
-        print("*", end=" ")
-    print()
-
-
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,i+1):
+        print("*",end="")
+    print()            
+            
+#
 1
 1 2
-1 2 3
-
+1 2 3            
 n = int(input())
 for i in range(1,n+1):
-    for j in range(1, i + 1):
-        print(j, end=" ")
-    print()
-    
+    for j in range(1,i+1):
+        print(j,end="")
+    print()            
+            
+#
 1
 2 3
-4 5 6...
-
+4 5 6
 n = int(input())
-t=1
+x=1
 for i in range(1,n+1):
-    for j in range(1, i + 1):
-        print(t, end=" ")
-        t=t+1
-    print()
-    
+    for j in range(1,i+1):
+            print(x,end="")
+            x+=1
+    print()   
+
+#
 A
 A B
-A B C....
+A B C
 n = int(input())
 for i in range(1,n+1):
-    for j in range(ord('A'),ord('A') + i):
-        print(chr(j), end=" ")
+    for j in range(1,i+1):
+        print(chr(64+j),end="")
+    print()   
+            
+#
+  *
+ ***
+*****
+n = int(input())
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,2*i):
+        print("*",end="")
+    print()                 
+
+#
+  *
+ ***
+*****
+ ***
+  *
+n = int(input())
+for i in range(1,n+1):
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,2*i):
+        print("*",end="")
+    print()
+for i in range(n-1,-1,-1):
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,2*i):
+        print("*",end="")
     print()    
-    
-    
-         *
-     *   *   *+
-*    *   *   *   *
+            
+  *
+ * *      
+*   * 
+ * *
+  *         
 n = int(input())
 for i in range(1,n+1):
-    for k in range(1,n-i+1):
-        print(" ", end=" ")
-    for j in range(1,2*i):
-        print("*", end=" ")
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,2*i):
+            if k==1 or k == (2*i)-1:
+                print("*",end="")
+            else:
+                print(" ",end="")
     print()
-    
-         *
-     *   *   *    
-*    *   *   *   * 
-     *   *   *
-         *
-N=3
+for i in range(n-1,-1,-1):
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(1,2*i):
+            if k==1 or k == (2*i)-1:
+                print("*",end="")
+            else:
+                print(" ",end="")
+    print()          
+            
+#
+  A
+ BAB  
+CBABC
 n = int(input())
 for i in range(1,n+1):
-    for k in range(1,n-i+1):
-        print(" ", end=" ")
-    for j in range(1,2*i):
-        print("*", end=" ")
-    print()
-for i in range(n-1,0,-1):
-    for k in range(1,n-i+1):
-        print(" ", end=" ")
-    for j in range(1,2*i):
-        print("*", end=" ")
-    print()
-
-    
-         *
-    *        *      
-*                * 
-    *        *
-         *
-n = int(input())
-
-for i in range(1, n + 1):
-    for k in range(n - i):
-        print(" ", end=" ")
-    for j in range(1, 2 * i):
-        if j == 1 or j == 2 * i - 1:
-            print("*", end=" ")
-        else:
-            print(" ", end=" ")
-    print()
-for i in range(n - 1, 0, -1):
-    for k in range(n - i):
-        print(" ", end=" ")
-    for j in range(1, 2 * i):
-        if j == 1 or j == 2 * i - 1:
-            print("*", end=" ")
-        else:
-            print(" ", end=" ")
+    for j in range(1,n-i+1):
+        print(" ",end="")
+    for k in range(i,0,-1):
+        print(chr(64+k),end="")
+    for m in range(2,i+1):
+        print(chr(64+m),end="")
     print() 
-    
-      A
-    B A B  
-  C B A B C
-N=3     
-n = int(input())
-
-for i in range(1, n + 1):
-    for k in range(n - i):
-        print(" ", end=" ")
-
-    for j in range(i, 0, -1):
-        print(chr(64 + j), end=" ")
-
-    for j in range(2, i + 1):
-        print(chr(64 + j), end=" ")
-
-    print()"""
