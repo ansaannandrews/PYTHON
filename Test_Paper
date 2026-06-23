@@ -1,0 +1,89 @@
+#TEST
+1. Two friends, Rohan and Aarav, are planning a road trip. They have two different vehicles, one with X liters of fuel capacity and the other with Y liters. They want to take equal-sized fuel containers for refueling, ensuring that they maximize the size of each container without wasting any fuel.
+
+To achieve this, they need to determine the largest possible container size that can evenly divide both fuel capacities. Can you help them find the perfect container size so they can enjoy their trip without any fuel issues?
+
+Input
+36
+60
+Output
+12
+Input
+48
+18
+Output
+6
+
+def fn(x,y):
+    f1=[]
+    f2=[]
+    cf=[]
+    for i in range(1,(x//2)+2):
+        if(x%i == 0):
+            f1.append(i)
+    for i in range(1,(y//2)+2):
+        if(y%i == 0):
+            f2.append(i)
+    for i in range(len(f1)):
+        for j in range(len(f2)):
+            if f1[i] == f2[j]:
+                cf.append(f1[i])
+    cf.sort()
+    return cf[-1]
+n1=int(input())
+n2=int(input())
+result=fn(n1,n2)
+print(result)
+
+2. You are given with N, size of the array, and value K. Then in next line you have to take N unique elements from user as input in an array.
+
+Your task is to find the Kth largest number from the list of elements.
+
+Input
+5 2
+10 40 30 20 50
+Output
+40
+
+
+def fn(a,n,k):
+    for i in range(0,n-1):
+        for j in range(0,n-1-i):
+            if a[j]>a[j+1]:
+                temp=a[j]
+                a[j]=a[j+1]
+                a[j+1]=temp
+    return a[-k]
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+result=fn(a,n,k)
+print(result)
+
+3. A company has launched a new text editor that allows users to enter English letters, numbers and whitespaces only. If a user attempts to enter any other type of character, it is counted as a miss.
+
+Given a string of text, write a program to help the developer to detect the number of misses by a given user in the given input and print the value of miss.
+
+Input Format
+
+The input consists of a string textInput, representing the text that is entered in the text editor by the user.
+
+Output Format
+
+Print an integer representing the number of misses by a given user in the given input.
+
+Input
+aa a234bc@ sad$ hsagd^
+Output
+3"""
+
+def fn(arr):
+    miss=0
+    for item in arr:
+        if ('A'<=item<='Z') or ('a'<=item<='z') or ('0'<=item<='9') or (item==" "):
+            miss+=0
+        else:
+            miss+=1
+    return miss
+arr=input()
+result=fn(arr)
+print(result)
